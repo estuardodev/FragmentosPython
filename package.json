@@ -27,5 +27,15 @@
   "main": "./thanks.js",
   "devDependencies": {
     "vscode": "^1.0.0"
-  }
+  },
+  "author": {
+    "name": "Estuardo Ramírez",
+    "email": "estuardo@estuardodev.com",
+    "url": "https://estuardodev.com"
+  },
+  "repository": {
+    "url": "https://github.com/estuardodev/FragmentosPython",
+    "type": "git"
+  },
+  "publisher": "estuardodev"
 }
