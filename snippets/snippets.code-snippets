@@ -1,0 +1,122 @@
+{
+  "Punto de entrada": {
+    "prefix": "!entrypoint",
+    "body": [
+      "def run():",
+      "    pass",
+      "",
+      "if __name__ == '__main__':",
+      "    run()"
+    ],
+    "description": "Punto de entrada básico para Python"
+  },
+  "Limpiar Consola": {
+    "prefix": "!consolalimpia",
+    "body": [
+      "import os",
+      "def consolaLimpia():",
+      "    if os.name == 'nt':",
+      "        os.system('cls')",
+      "    else:",
+      "        os.system('clear')",
+      "",
+      "consolaLimpia()"
+    ],
+    "description": "Invocarás el código inmediato con el cual podrás limpiar la consola de tu programa al momento de ejecutar"
+  },
+  "Leer Archivo Línea por Línea": {
+    "prefix": "!leerarchivo",
+    "body": [
+      "nombre_archivo = 'archivo.txt'",
+      "",
+      "with open(nombre_archivo, 'r') as archivo:",
+      "    for linea in archivo:",
+      "        print(linea.strip())"
+    ],
+    "description": "Lee un archivo línea por línea e imprime cada línea en consola"
+  },
+  "Encontrar Máximo": {
+    "prefix": "!numeromaximo",
+    "body": [
+      "numeros = [5, 2, 9, 1, 7]",
+      "maximo = max(numeros)",
+      "print(maximo)"
+    ],
+    "description": "Encuentra el valor máximo en una lista de números y lo imprime en consola"
+  },
+  "Generar Número Aleatorio": {
+    "prefix": "!numerorandom",
+    "body": [
+      "import random",
+      "",
+      "numero_aleatorio = random.randint(1, 100)",
+      "print(numero_aleatorio)"
+    ],
+    "description": "Genera un número aleatorio entre 1 y 100 y lo imprime en consola"
+  },
+  "Calcular Promedio": {
+    "prefix": "!promedio",
+    "body": [
+      "numeros = [4, 7, 2, 9, 5]",
+      "promedio = sum(numeros) / len(numeros)",
+      "print(promedio)"
+    ],
+    "description": "Calcula el promedio de una lista de números y lo imprime en consola"
+  },
+  "Leer Entrada del Usuario": {
+    "prefix": "!entradausuario",
+    "body": [
+      "nombre = input('Ingrese su nombre: ')",
+      "print(f'Hola, {nombre}!')"
+    ],
+    "description": "Lee la entrada del usuario y la imprime en consola"
+  },
+  "Buscar Índice de Elemento": {
+    "prefix": "!buscarindice",
+    "body": [
+      "lista = ['manzana', 'banana', 'naranja', 'uva']",
+      "elemento = 'naranja'",
+      "",
+      "if elemento in lista:",
+      "    indice = lista.index(elemento)",
+      "    print(f'El índice de {elemento} es {indice}')",
+      "else:",
+      "    print(f'{elemento} no se encuentra en la lista')"
+    ],
+    "description": "Busca un elemento en una lista y muestra su índice en consola"
+  },
+  "Copiar al Portapapeles": {
+    "prefix": "!copiarportapapeles",
+    "body": [
+      "import pyperclip",
+      "",
+      "texto = 'Hola, mundo!'",
+      "pyperclip.copy(texto)",
+      "print('Texto copiado al portapapeles')"
+    ],
+    "description": "Copia un texto al portapapeles del sistema"
+  },
+  "Calcular Tiempo de Ejecución": {
+    "prefix": "!tiempo",
+    "body": [
+      "import time",
+      "",
+      "def calcular_tiempo(func):",
+      "    def wrapper(*args, **kwargs):",
+      "        tiempo_inicio = time.time()",
+      "        resultado = func(*args, **kwargs)",
+      "        tiempo_fin = time.time()",
+      "        tiempo_ejecucion = tiempo_fin - tiempo_inicio",
+      "        print(f'Tiempo de ejecución: {tiempo_ejecucion} segundos')",
+      "        return resultado",
+      "    return wrapper",
+      "",
+      "@calcular_tiempo",
+      "def mi_funcion():",
+      "    # Código de tu función aquí",
+      "",
+      "mi_funcion()"
+    ],
+    "description": "Calcula el tiempo de ejecución de una función y lo muestra en consola"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "fragmentospython",
+  "displayName": "Fragmentos Python",
+  "description": "'Fragmentos Python' es una extensión para Visual Studio Code que proporciona una colección de fragmentos de código listos para usar en Python, para agilizar y simplificar el desarrollo de tus proyectos.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./thanks.js",
+  "devDependencies": {
+    "vscode": "^1.0.0"
+  }
+}
