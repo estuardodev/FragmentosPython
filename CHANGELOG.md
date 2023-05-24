@@ -2,6 +2,13 @@
 
 Todas las actualizaciones y cambios importantes de la extensión "Fragmentos Python" se registrarán en este archivo.
 
+## [0.1.1] - 2023-05-24
+
+### Agregado 2023-05-24
+
+- Añadidos los siguientes elementos:
+  - Icono de la extensión
+
 ## [0.1.0] - 2023-05-24
 
 ### Agregado
